@@ -1,9 +1,9 @@
 Please Note
 ===========
 
-This repository serves as a historical reference to ToME, rather than a platform for further development. It includes the modules 'Fury' and 'Theme', which were recovered from the Wayback Machine on Archive.org. These are remnants from the time before the original website was hacked, leading to the loss of most of the modules.
+This repository serves as a reference to ToME, rather than a platform for further development. It includes the modules 'Fury' and 'Theme', which were recovered from the Wayback Machine on Archive.org. These are remnants from the time before the original website was hacked, leading to the loss of most of the modules.
 
-It's important to note that subsequent versions of ToME, developed by Anonymous Hero, underwent significant changes. These alterations resulted in the removal or malfunction of several features. For example, in this version, you'll notice mist in the burrow-downs which disappeared during the process of code modernization. This repository is intended to offer a glimpse into the original gameplay of ToME, preserving it as a historical reference.
+It's important to note that subsequent versions of ToME, updated by Anonymous Hero and others, underwent significant changes. These alterations resulted in the removal or malfunction of several features. For example, in this version, you'll notice mist in the burrow-downs which disappeared during the process of code modernization. This repository is intended to offer a glimpse into the original gameplay of ToME, preserving it as a historical reference.
 
 Using the CMake build system
 ============================
