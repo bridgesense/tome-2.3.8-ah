@@ -4483,7 +4483,7 @@ static void process_command(void)
 
 #endif /* VERIFY_SAVEFILE */
 
-	case KTRL('T'):
+	case KTRL('V'):
 		{
 			do_cmd_time();
 		}

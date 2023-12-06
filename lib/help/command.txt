@@ -130,9 +130,9 @@ that you can always, for example, use "\" + "." + "6", to specify "run east".
  *****command.txt*63[+  Alter grid]                          *****command.txt*64[^Q  Quit to next midi song]
  *****command.txt*65[=  Set options]                         *****command.txt*66[^R  Redraw the screen]
  *****command.txt*67[;  Walk (with pickup)]                  *****command.txt*68[^S  Save and don't quit]
- *****command.txt*69[:  Take notes]                          *****command.txt*70[^T  Time of the day]
+ *****command.txt*69[:  Take notes]                          ^T  (unused)
  '  (unused)                            ^U  (unused)
- *****command.txt*71["  Enter a user pref command]           ^V  (unused)
+ *****command.txt*71["  Enter a user pref command]           *****command.txt*70[^V  Time of the day]
  *****command.txt*72[,  Stay still (with pickup)]            ^W  (special - wizard mode)
  *****command.txt*74[<  Go up staircase]                     *****command.txt*75[^X  Save and quit]
  *****command.txt*76[.  Run]                                 ^Y  (unused)
@@ -193,14 +193,16 @@ that you can always, for example, use "\" + "." + "6", to specify "run east".
  *****command.txt*67[;  Walk (with pickup)]                  *****command.txt*68[^S  Save and don't quit]
  *****command.txt*69[:  Take notes]                          *****command.txt*37[^T  Dig a Tunnel]
  *****command.txt*44['  Give object to monster]              *****command.txt*95[^U  (tunnel - north east)]
- *****command.txt*71["  Enter a user pref command]           ^V  (unused)
+ *****command.txt*71["  Enter a user pref command]           *****command.txt*70[^V  Time of the day]
  *****command.txt*76[,  Run]                                 ^W  (special - wizard mode)
  *****command.txt*74[<  Go up staircase]                     *****command.txt*75[^X  Save and quit]
  *****command.txt*72[.  Stay still (with pickup)]            *****command.txt*95[^Y  (tunnel - north west)]
  *****command.txt*77[>  Go down staircase]                   ^Z  (special - borg command)
- *****command.txt*79[\  (special - bypass keymap)]            *****command.txt*80[|  Do cmovies]
- *****command.txt*81[`  (special - escape)]                   *****command.txt*82[~  Display current knowledge]
- *****command.txt*83[/  Identify symbol]                      *****command.txt*84[?  Help]
+ *****command.txt*79[\  (special - bypass keymap)]           *****command.txt*80[|  Do cmovies]
+ *****command.txt*81[`  (special - escape)]                  *****command.txt*82[~  Display current knowledge]
+ *****command.txt*83[/  Identify symbol]                     *****command.txt*84[?  Help]
+ *****command.txt*19[\\j  Jam a door]                        *****command.txt*23[\\L  Look around dungeon by sector]
+ *****command.txt*85[\\n  Repeat last command]               *****command.txt*91[\\N  Abilities Screen]
 
 ~~~~~102|Commands|Special keys
 #####R=== Special Keys ===
@@ -572,12 +574,11 @@ for a quantity will convert any "letters" into the maximal legal value.
         wilderness map.  Going up a staircase will take you to a new dungeon
         level unless you are at the first level of the dungeon, in which case
         you will return to the surface.  Note that whenever you leave a dungeon
-        level, you will never find it again, unless the "permanent_levels" 
-        option is set or the level contains a dungeon town.  This means that
-        for all intents and purposes, any objects on that level are destroyed.
-        This includes unknown artifacts unless the "Create characters in
-        preserve mode" option was set when your character was created, in which
-        case the artifacts may show up again later.
+        level, you will never find it again, unless the level contains a dungeon
+        town.  This means that for all intents and purposes, any objects on that
+        level are destroyed. This includes unknown artifacts unless the "Create
+        characters in preserve mode" option was set when your character was
+        created, in which case the artifacts may show up again later.
 ~~~~~77
 [[[[[GGo down staircase (>)]
         Descends a down staircase you are standing on.  There are always
@@ -652,7 +653,7 @@ for a quantity will convert any "letters" into the maximal legal value.
         will be displayed in a different way.  Rubble sometimes covers an
         object.  It is only possible to tunnel if you are wielding a digging
         tool such as a shovel or a pick.  Tunnelling ability increases with
-        strength and tool weight.  This command can take a count, requires a
+        lstrength and tool weight.  This command can take a count, requires a
         direction, and is affected by the "always_repeat" option.
 ~~~~~26
 [[[[[GOpen a door or chest (o)]
@@ -670,7 +671,7 @@ for a quantity will convert any "letters" into the maximal legal value.
         Bashing a door open may break it. Close can take a count, requires a
         direction, and is affected by the "always_repeat" option.
 ~~~~~19
-[[[[[GJam a door (j) or Spike a door (S)]
+[[[[[GJam a door (j)]
         Many monsters can simply open closed doors, and can eventually
         get through a locked door.  You may therefore occasionally want
         to jam a door shut with iron spikes.  Each spike used on the door
@@ -707,7 +708,7 @@ for a quantity will convert any "letters" into the maximal legal value.
         can take a count, requires a direction, and is affected by the
         "always_repeat" option.
 ~~~~~43
-[[[[[GEngrave the floor (x)]
+[[[[[GEngrave the floor (x) or (]) ]
         The dungeon is full of magics, and as such pools of it collect on
         the floor in places. With the "inscribe" command, it is possible
         to create some spell effects by inscribing words you have read from
@@ -717,7 +718,7 @@ for a quantity will convert any "letters" into the maximal legal value.
         only by the player, some only by monsters, and some are triggered by
         both.
 ~~~~~46
-[[[[[GSteal (Z)]
+[[[[[GSteal (Z) or ([)]
         Allows the player to try to steal items from shops. Also allows 
         rogues to steal from monsters.
 ~~~~~118|Commands|Spells and prayers
@@ -822,17 +823,17 @@ for a quantity will convert any "letters" into the maximal legal value.
         Corpses can be cut up into smaller pieces of meat, allowing the user to
         eat the meat, or cure it for later use.
 ~~~~~21
-[[[[[GCure meat (K)]
+[[[[[GCure meat (K) or Ossify meat (O)]
         Curing meat requires the use of a potion of salt water, and is used to
         protect meat from hacked-up corpses from going bad.
 ~~~~~16
-[[[[[GDrink from a fountain (H)]
+[[[[[GDrink from a fountain (H) or (V)]
         All fountains in Arda are magical, and act like magical potions.  The
         game will ask you whether you want to quaff from a fountain or to fill
         empty bottles.  The only way to identify the type of fountain is to
         fill your bottles from it and see what you get.
 ~~~~~44
-[[[[[GGive item to monster (y)]
+[[[[[GGive item to monster (y) or (')]
         This command is used to give an item within your inventory to a monster
         standing next to you. The monster may not accept the item you give it, 
         however.
