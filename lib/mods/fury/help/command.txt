@@ -653,7 +653,7 @@ for a quantity will convert any "letters" into the maximal legal value.
         will be displayed in a different way.  Rubble sometimes covers an
         object.  It is only possible to tunnel if you are wielding a digging
         tool such as a shovel or a pick.  Tunnelling ability increases with
-        lstrength and tool weight.  This command can take a count, requires a
+        strength and tool weight.  This command can take a count, requires a
         direction, and is affected by the "always_repeat" option.
 ~~~~~26
 [[[[[GOpen a door or chest (o)]
